@@ -1,0 +1,8 @@
+export const OPEN_SNACKBAR = 'OPEN_SNACKBAR';
+export const CLOSE_SNACKBAR = 'CLOSE_SNACKBAR';
+export const AUTH_USER = 'AUTH_USER';
+export const UNAUTH_USER = 'UNAUTH_USER';
+export const ON_LOADING_LOGIN = 'ON_LOADING_LOGIN';
+export const OFF_LOADING_LOGIN = 'OFF_LOADING_LOGIN';
+export const SIGN_UP = 'SIGN_UP';
+export const CHANGE_STATUS_LOGIN = 'CHANGE_STATUS_LOGIN';

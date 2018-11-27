@@ -1,0 +1,14 @@
+.Login-component {
+   background: url("../../pictures/background.png") no-repeat center center fixed;
+   background-size: cover;
+   width: 100%;
+   height: 86ch;
+}
+
+.Login-form{
+    margin: auto;
+    width: 50%;
+    padding: 200px;
+    font-weight: bold;
+    opacity: 0.8;
+}
