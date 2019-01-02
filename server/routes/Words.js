@@ -20,4 +20,9 @@ router.post('/', authentication, Validator.addNewWord, (req, res) => {
 
 })
 
+router.get('/test',(req,res)=>{
+  console.log(process.env.PORT);
+})
+
+
 module.exports = router;

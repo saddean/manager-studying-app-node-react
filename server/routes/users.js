@@ -3,7 +3,7 @@ var router = express.Router();
 const validator = require('../validation/users');
 const User = require('../models/user');
 const authenticate = require('./Authentication');
-const mail = require('../mail/sendmail');
+const mailler = require('../models/sendmail');
 
 //register
 router.post('/register', validator.RegisterValidate, (req, res) => {
@@ -17,7 +17,7 @@ router.post('/register', validator.RegisterValidate, (req, res) => {
         let userMail = user.email;
         user.genarateToken()
             .then(token => {
-                mail.authMail(userMail, token)
+                mailler.authMail(userMail, token)
                     .then(info => {
                         console.log(info);
                         return res.status(200).send({ "status": true, "message": "Email đã được gửi" })

@@ -1,7 +1,7 @@
-const nodemailer = require('nodemailier');
+const mail = require('nodemailer');
 
 //config
-const transporter = nodemailer.createTransport({
+const transporter = mail.createTransport({
     host: "smtp.gmail.com",
     auth: {
         type: "login", // default
@@ -15,9 +15,9 @@ const authMail = (ip, text) => {
     var mainOptions = { // thiết lập đối tượng, nội dung gửi mail
         from: 'Tuong An',
         to: '11a1pro@gmail.com',
-        subject: `[Thông báo] Quá băng thông ${ip}`,
-        text: 'Quá băng thông',
-        html: `<p>${ip}: ${text}</p>`
+        subject: `[Xác thực] Thông Báo Xác Thực`,
+        text: 'Thông báo xác thực',
+        html: `Xác thực <a href="${process.env.HOST}/api/users/auth/${text}">Tại đây</a>`
     };
     return new Promise((resolve, reject) => {
         transporter.sendMail(mainOptions, function (err, info) {
