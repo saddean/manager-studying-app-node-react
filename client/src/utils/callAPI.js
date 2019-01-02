@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const URL_API = 'http://localhost:5000/api';
+const URL_API = 'https://react-node-auth.herokuapp.com/api';
 
 const callAPI = (endpoint, method = 'GET', data, token = '') => {
     return axios({
